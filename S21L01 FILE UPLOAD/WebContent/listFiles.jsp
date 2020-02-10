@@ -10,6 +10,8 @@
 <title>Listing Images</title>
 </head>
 <body>
+	<%! String form; int fileId; %>
+	
 Listing Images
 <table border="1"> 
 <th> Preview</th>
@@ -26,10 +28,20 @@ String path =(String) request.getAttribute("path");
 				"<li> File ID: "+f.getId()+" </li>"+
 				"<li> File Name: "+f.getFileName()+"</li>"+
 				"<li> File Label: "+f.getLabel()+" </li>"+
-				"<li> File CAption: "+f.getCaption()+" </li>"+
+				"<li> File Caption: "+f.getCaption()+" </li>"+
 				
-				"</lu></td></tr>"
-				);
+				"</lu></td>" );
+		fileId=f.getId();
+		
+		String form = "<form action='FilesHandler' method='post'>"+
+				"Label: <input type='text' name='label' /> <br/><br/>"+
+				"Caption: <input type='text' name='caption' /> <br/><br/>"+
+				"<input type='hidden' name='fileId' value='"+fileId+"'/>"+
+				"<input type='hidden' name='fileName' value='"+f.getFileName()+"'/>"+
+				"<input type='hidden' name='action' value='updateInformation'/>"+
+				"<input type='submit' value='update' /> "+
+				"</form>";
+		out.print ("<td>"+form+" </td></tr>");
 	}
 
 

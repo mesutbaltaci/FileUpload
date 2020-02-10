@@ -30,12 +30,16 @@ public class FilesHandler extends HttpServlet {
 			filesUpload(request, response);
 			break;
 		
+		case "updateInformation":
+			updateInformation(request, response);
+			break;
 
 		default:
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 			break;
 		}
 	}
+	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
@@ -50,6 +54,18 @@ public class FilesHandler extends HttpServlet {
 		}
 	}
 	
+	
+	private void updateInformation(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int fileId = Integer.parseInt(request.getParameter("fileId"));
+		String fileName = request.getParameter("fileName");
+		String label = request.getParameter("label");
+		String caption = request.getParameter("caption");
+		Files file = new Files(fileId,fileName,label,caption);
+		new FilesDAO().updateInformation(fileId, label,caption);
+		listImages(request, response);
+		
+	}
+
 	
 	
 	private void listImages(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
