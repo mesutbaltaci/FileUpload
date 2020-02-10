@@ -42,6 +42,14 @@ public class FilesDAO {
 		session.getTransaction().commit();
 		
 	}
+
+	public Files getFile(int fileId) {
+		Session session = factory.getCurrentSession();
+		session.beginTransaction();
+		Files file = session.get(Files.class, fileId);
+		session.getTransaction().commit();
+		return file;
+	}
 	
 
 }

@@ -17,7 +17,7 @@ Listing Images
 <th> Preview</th>
 <th> Available info</th>
 <th> Update Info </th>
-<th> Action </th>
+<th>Available  Action </th>
 
 <%
 String path =(String) request.getAttribute("path");
@@ -41,7 +41,9 @@ String path =(String) request.getAttribute("path");
 				"<input type='hidden' name='action' value='updateInformation'/>"+
 				"<input type='submit' value='update' /> "+
 				"</form>";
-		out.print ("<td>"+form+" </td></tr>");
+		out.print ("<td>"+form+" </td>");
+		out.print("<td><ul><li><a href='"+request.getContextPath()+"/FilesHandler?action=viewImage&fileId="+
+				f.getId()+"'>View Image </a></li></lu> </td></tr>");
 	}
 
 
