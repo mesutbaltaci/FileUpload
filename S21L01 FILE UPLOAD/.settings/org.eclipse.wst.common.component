@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="S21L01 FILE UPLOAD">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="S21L01_FILE_UPLOAD"/>
+        <property name="java-output-path" value="/S21L01 FILE UPLOAD/build/classes"/>
+    </wb-module>
+</project-modules>

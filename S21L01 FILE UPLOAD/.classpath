@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/byte-buddy-1.10.2.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/FastInfoset-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/hibernate-commons-annotations-5.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/hibernate-core-5.4.10.Final.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/istack-commons-runtime-3.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jandex-2.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/javassist-3.24.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jaxb-runtime-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jboss-logging-3.3.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/mysql-connector-java-8.0.12.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/stax-ex-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/eclipse/important jars/libs/txw2-2.3.1.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
