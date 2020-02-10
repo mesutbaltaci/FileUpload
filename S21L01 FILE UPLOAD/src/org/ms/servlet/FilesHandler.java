@@ -51,6 +51,11 @@ public class FilesHandler extends HttpServlet {
 		case "viewImage":
 			viewImage(request, response);
 			break;
+		
+		case "deleteImage":
+			deleteImage(request, response);
+			break;
+
 
 			
 			
@@ -61,6 +66,23 @@ public class FilesHandler extends HttpServlet {
 	}
 	
 	
+	private void deleteImage(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		int fileId =Integer.parseInt(request.getParameter("fileId"));
+		Files file = new FilesDAO().getFile(fileId);
+		new FilesDAO().deleteFile(fileId);
+		// logic for file deletion from filesystem
+		
+		File fileOnDisk = new File (path+file.getFileName());
+		if(fileOnDisk.delete()) {
+			System.out.println("File got deleted from filesystem");
+		}
+		else {
+			System.out.println("File not deleted from filesystem");
+		}
+		listImages(request, response);
+	}
+
+
 	private void viewImage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int fileId= Integer.parseInt(request.getParameter("fileId"));
 		Files file = new FilesDAO().getFile(fileId);

@@ -43,7 +43,10 @@ String path =(String) request.getAttribute("path");
 				"</form>";
 		out.print ("<td>"+form+" </td>");
 		out.print("<td><ul><li><a href='"+request.getContextPath()+"/FilesHandler?action=viewImage&fileId="+
-				f.getId()+"'>View Image </a></li></lu> </td></tr>");
+				f.getId()+"'>View </a></li>");
+		
+		out.print("<li><a href='"+request.getContextPath()+"/FilesHandler?action=deleteImage&fileId="+
+				f.getId()+"' onclick=\"if(!confirm('Are you sure to delete image?')) return false\">Delete </a></li></lu> </td></tr>");
 	}
 
 
